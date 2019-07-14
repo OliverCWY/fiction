@@ -10,6 +10,8 @@
     <script src="js/back.js"></script>
     <script src="js/libs/backFund.js"></script>
     <script src="js/libs/webcrabber.js"></script>
+    <script src="js/libs/gbk.js"></script>
+    <script src="sources.js"></script>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -26,18 +28,18 @@
             </label>
             <div class="mdl-textfield__expandable-holder">
               <input class="mdl-textfield__input" type="text" name="sample"
-                     id="fixed-header-drawer-exp">
+                     id="fixed-header-drawer-exp" onkeyup="if(event.keyCode==13){location.href='index.html?search='+this.value}">
             </div>
           </div>
         </div>
       </header>
       <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
+        <span class="mdl-layout-title">导航</span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="index.html">主页</a>
+          <a class="mdl-navigation__link" href="" id="prev">上一页</a>
+          <a class="mdl-navigation__link" href="" id="menu">目录</a>
+          <a class="mdl-navigation__link" href="" id="next">下一页</a>
         </nav>
       </div>
       <main class="mdl-layout__content">
