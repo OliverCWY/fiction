@@ -1,0 +1,71 @@
+.bookContainer{
+  height:144px;
+  width:50%;
+  margin-top: 4px:!important;
+  display:inline-block;
+  position:relative;
+}
+.bookCover{
+  height:136px;
+  width:auto;
+  float:left;
+}
+.bookInfo{
+  display:inline-block;
+  position:relative;
+  left:10px;
+  height:auto;
+}
+.bookDelete{
+  background-color:red;
+  position:absolute;
+  text-decoration:none;
+  color:white;
+  top:0px;
+  right:0px;
+  display:none;
+  padding:2px;
+  z-index:2;
+}
+.bookContainer:hover .bookDelete{
+  display:block;
+}
+.bookName{
+  margin-bottom:5px;
+}
+.bookContainer:first-of-type{
+  margin-top:0px;
+}
+.bookContainer:hover .bookBox{
+  transform:scale(0.9);
+}
+.bookBox{
+  -webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+  display:block;
+  text-decoration: none;
+  color:black;
+  position:absolute;
+  top:4px;
+  right:4px;
+  left:4px;
+  bottom:4px;
+  border-left:6px solid brown;
+  background-color: #F6F6F6;
+}
+@media screen and (max-width: 800px) {
+  .bookContainer{
+    width:100%;
+    margin-bottom:-1px;
+    border-width:1px 0px 1px 0px;
+    border-style:solid;
+    border-color: #999999;
+    background-color: #FFFFFF;
+  }
+  .bookBox{
+    background-color: white;
+  }
+}
+.mdl-layout__content{
+  padding:16px;
+}
