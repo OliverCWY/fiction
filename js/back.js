@@ -1,6 +1,6 @@
 var back=(()=>{
   var books=[],sources={};
-  const Sources="sources.json";
+  const Sources="https://raw.githubusercontent.com/OliverCWY/fiction/beta/sources.json";
   var getLocalBooks=()=>{
     books=backFund.getJSON("books");
   }
@@ -16,10 +16,10 @@ var back=(()=>{
   $(document).ready(()=>{
     getLocalSources();
     console.log(sources);
-    if(sources=={}){webcrabber.getHTML(Sources,(html)=>{
-      sources=JSON.parse(html);
-      for(var i in sources)sources[i]["activate"]=true;
+    if(sources==null){console.log(1);webcrabber.getHTML(Sources,(context)=>{
+      sources=JSON.parse(context);
       console.log(sources);
+      for(var i in sources)sources[i]["activate"]=true;
     });
     }
   });

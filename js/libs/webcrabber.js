@@ -6,6 +6,7 @@ var webcrabber=(()=>{
     }
   });
   this.getHTML=(url,func)=>{
+    console.log(url,func);
     var finish=false;
     if(url.substr(0,4)!="http")url="https://"+url;
     $.get(url,func);
